@@ -11,23 +11,19 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   preserve_egg_dir: True
 
 requirements:
   host:
-    - empymod
-    - numba >=0.40.0
-    - numpy 1.15.0
     - pip
     - python >=3.7
     - setuptools_scm
-    - scipy >=1.1.0
   run:
     - empymod
     - numba >=0.40.0
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.15.0
     - python >=3.7
     - scipy >=1.1.0
 
