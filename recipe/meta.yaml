@@ -1,5 +1,5 @@
 {% set name = "emg3d" %}
-{% set version = "0.9.3" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 30e606393a8f2d01b619b30cc32083cb167103608fa51c9245e5e6361e11c74b
+  sha256: f26ca0cd40e4c064b988fae96c10312ed787148998f4c62825d20dc2e597594c
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
-  preserve_egg_dir: True
+  script: {{ PYTHON }} -m pip install . -vv
+  preserve_egg_dir: true
 
 requirements:
   host:
@@ -33,10 +33,10 @@ test:
 
 about:
   home: https://empymod.github.io
-  license: "Apache Software"
+  license: Apache Software
   license_family: APACHE
   license_file: LICENSE
-  summary: "A multigrid solver for 3D electromagnetic diffusion."
+  summary: A multigrid solver for 3D electromagnetic diffusion.
   description: |
     The modeller emg3d is a multigrid solver for 3D EM diffusion with tri-axial
     electrical anisotropy. The matrix-free solver can be used as main solver or
