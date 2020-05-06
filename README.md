@@ -3,7 +3,7 @@ About emg3d
 
 Home: https://empymod.github.io
 
-Package license: Apache Software
+Package license: Apache-2.0
 
 Feedstock license: BSD 3-Clause
 
