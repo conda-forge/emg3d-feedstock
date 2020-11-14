@@ -5,9 +5,13 @@ Home: https://empymod.github.io
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/emg3d-feedstock/blob/master/LICENSE.txt)
 
 Summary: A multigrid solver for 3D electromagnetic diffusion.
+
+Development: https://github.com/empymod/emg3d
+
+Documentation: https://emg3d.readthedocs.io/
 
 The modeller emg3d is a multigrid solver for 3D EM diffusion with tri-axial
 electrical anisotropy. The matrix-free solver can be used as main solver or
