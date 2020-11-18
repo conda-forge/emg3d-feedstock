@@ -1,5 +1,5 @@
 {% set name = "emg3d" %}
-{% set version = "0.14.1" %}
+{% set version = "0.14.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0ad00a760b307149e3e4df9f07267cfb96e5c9280d52b4f1119330afe479c65b
+  sha256: 50ab9c1b7c4c7766709b249dd09d93caf15068c6dc7d4f1ee233fc4251d35d67
 build:
   noarch: python
   number: 0
