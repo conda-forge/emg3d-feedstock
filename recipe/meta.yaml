@@ -10,7 +10,7 @@ source:
   sha256: c556ee42b228fa8c9b0190f0a32573839b640d67d45af230bcd2fd7ac5fa5ddb
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -28,7 +28,7 @@ test:
     - emg3d
 
 about:
-  home: https://empymod.github.io
+  home: https://emsig.github.io
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
@@ -39,7 +39,7 @@ about:
     as preconditioner for Krylov subspace methods, and the governing equations
     are discretized on a staggered Yee grid.
   doc_url: https://emg3d.readthedocs.io/
-  dev_url: https://github.com/empymod/emg3d
+  dev_url: https://github.com/emsig/emg3d
 
 extra:
   recipe-maintainers:
