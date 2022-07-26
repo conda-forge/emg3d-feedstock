@@ -1,7 +1,7 @@
 About emg3d
 ===========
 
-Home: https://emsig.github.io
+Home: https://emsig.xyz
 
 Package license: Apache-2.0
 
@@ -11,7 +11,7 @@ Summary: A multigrid solver for 3D electromagnetic diffusion.
 
 Development: https://github.com/emsig/emg3d
 
-Documentation: https://emg3d.readthedocs.io/
+Documentation: https://emg3d.emsig.xyz
 
 The modeller emg3d is a multigrid solver for 3D EM diffusion with tri-axial
 electrical anisotropy. The matrix-free solver can be used as main solver or
