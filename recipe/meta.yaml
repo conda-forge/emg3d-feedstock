@@ -10,8 +10,10 @@ source:
   sha256: 2de5322d0be573f13506f5b0101a9b9e6a85ffffcd9836b2bf9f644265a3dfe8
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - emg3d=emg3d.cli.main:main
 
 requirements:
   host:
@@ -28,7 +30,7 @@ test:
     - emg3d
 
 about:
-  home: https://emsig.github.io
+  home: https://emsig.xyz
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
@@ -38,7 +40,7 @@ about:
     electrical anisotropy. The matrix-free solver can be used as main solver or
     as preconditioner for Krylov subspace methods, and the governing equations
     are discretized on a staggered Yee grid.
-  doc_url: https://emg3d.readthedocs.io/
+  doc_url: https://emg3d.emsig.xyz
   dev_url: https://github.com/emsig/emg3d
 
 extra:
