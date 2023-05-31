@@ -1,11 +1,11 @@
-About emg3d
-===========
+About emg3d-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/emg3d-feedstock/blob/main/LICENSE.txt)
 
 Home: https://emsig.xyz
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/emg3d-feedstock/blob/main/LICENSE.txt)
 
 Summary: A multigrid solver for 3D electromagnetic diffusion.
 
