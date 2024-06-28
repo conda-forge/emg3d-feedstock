@@ -1,5 +1,5 @@
 {% set name = "emg3d" %}
-{% set version = "1.8.2" %}
+{% set version = "1.8.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c51bbda791561f6ed48608e96e9ca693e24a2ffd084802947269005ec38e442e
+  sha256: c99b9745ddfb6329bac23f546df994773fa2f47ac6c634565d2ce9f102da45b7
 build:
   noarch: python
   number: 0
@@ -21,9 +21,11 @@ requirements:
     - python >=3.7
     - setuptools_scm
   run:
-    - numba >=0.45.0
-    - python >=3.7
-    - scipy >=1.4.0
+    - numba >=0.53.0
+    - python >=3.9
+    - scipy >=1.9
+    - empymod >=2.3.0
+    - numpy <2.0
 
 test:
   imports:
