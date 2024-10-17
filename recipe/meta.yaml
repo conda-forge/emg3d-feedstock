@@ -10,7 +10,7 @@ source:
   sha256: 85eca29535bc89d9e1247801f7351ecdb622d6aa4f9d9d31431a1b68d2788f4c
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - emg3d=emg3d.cli.main:main
@@ -18,18 +18,22 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.10
+    - setuptools
     - setuptools_scm
   run:
-    - numba >=0.53.0
-    - python >=3.9
-    - scipy >=1.9
-    - empymod >=2.3.0
-    - numpy <2.0
+    - python >=3.10
+    - numpy
+    - scipy >=1.10
+    - numba
+    - empymod >=2.3.2
 
 test:
   imports:
     - emg3d
+    - emg3d.inversion
+    - emg3d.inversion.simpeg
+    - emg3d.inversion.pygimli
 
 about:
   home: https://emsig.xyz
