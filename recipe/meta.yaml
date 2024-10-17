@@ -23,11 +23,17 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.10
+    - numpy
+    - scipy >=1.10
+    - numba
     - empymod >=2.3.2
 
 test:
   imports:
     - emg3d
+    - emg3d.inversion
+    - emg3d.inversion.simpeg
+    - emg3d.inversion.pygimli
 
 about:
   home: https://emsig.xyz
