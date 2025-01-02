@@ -1,16 +1,17 @@
+{% set python_min = '3.10' %}
 {% set name = "emg3d" %}
-{% set version = "1.8.4" %}
+{% set version = "1.8.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 85eca29535bc89d9e1247801f7351ecdb622d6aa4f9d9d31431a1b68d2788f4c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 84ddc7d1e6890f44ab801f4c4e1616944f4eac034304560194a596fdd2758924
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - emg3d=emg3d.cli.main:main
@@ -18,17 +19,19 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools
     - setuptools_scm
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy
     - scipy >=1.10
     - numba
     - empymod >=2.3.2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - emg3d
     - emg3d.inversion
