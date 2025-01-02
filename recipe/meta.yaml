@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "emg3d" %}
 {% set version = "1.8.5" %}
 
@@ -18,17 +19,19 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools
     - setuptools_scm
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy
     - scipy >=1.10
     - numba
     - empymod >=2.3.2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - emg3d
     - emg3d.inversion
