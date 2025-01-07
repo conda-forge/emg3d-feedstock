@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "emg3d" %}
-{% set version = "1.8.5" %}
+{% set version = "1.8.6" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 84ddc7d1e6890f44ab801f4c4e1616944f4eac034304560194a596fdd2758924
+  sha256: 5f8bf6681a7afd2bd37ee1ecca109546429fe2c399993b92cfa8b9e111cf103f
 build:
   noarch: python
   number: 0
@@ -25,7 +25,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy
-    - scipy >=1.10
+    - scipy (>=1.10, <=1.15)
     - numba
     - empymod >=2.3.2
 
